@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://www.myphysicslab.com/springs/double-spring-en.html -->
+<html lang="en" style="visibility: visible;">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title lang="en">myPhysicsLab Double Spring</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./myPhysicsLab Double Spring_files/stylesheet1.css">
+  <link rel="icon" sizes="32x32" type="image/png" href="https://www.myphysicslab.com/common/myphysicsicon.png">
+
+  <script>
+    document.getElementsByTagName("html")[0].style.visibility = "hidden";
+</script>
+</head>
+
+<body>
+
+  <h1 lang="en">Пружність</h1>
+
+  <div id="header_nav">
+    <a class="nav_link" href="./myPhysicsLab Inverted Vibrating Pendulum.html">Попередній</a>
+    <a class="nav_link" href="./myPhysicsLab Colliding Blocks.html">Наступний</a>
+  </div>
+  <ul id="header_bar" class="horiz_tabs">
+  </ul>
+
+
+  <div id="container" class="control_container" lang="en">
+    <div id="div_graph" style="position: relative; float: left; display: none; width: 49%; height: auto;">
+    </div>
+    <div id="div_time_graph" style="position: relative; float: left; display: none;">
+    </div>
+    <div id="sim_applet" style="position: relative; float: left; width: 49%; height: auto; display: block;">
+      <div style="position: absolute; right: 10%; bottom: 12%; width: 126px; display: none;">
+        <div style="float: right; margin-top: 18px;"><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/plus_gray.png"
+              width="30" height="30"></button><br><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/minus_gray.png"
+              width="30" height="30"></button></div>
+        <div style="text-align: center;">
+          <div style="width: 96px;"><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/up_gray.png"
+                width="30" height="30"></button></div>
+          <div style="width: 96px;"><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/backward_gray.png"
+                width="30" height="30"></button><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/target_gray.png"
+                width="30" height="30"></button><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/forward_gray.png"
+                width="30" height="30"></button></div>
+          <div style="width: 96px;"><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/down_gray.png"
+                width="30" height="30"></button></div>
+        </div>
+      </div>
+    </div>
+    <div id="sim_controls" class="control_group" style="margin-left: 10px; display: inline-block; column-count: 1; width: auto;">
+    </div>
+    <div id="graph_controls" class="control_group" style="display: none;">
+      <div style="display: block;"><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/rewind.png"
+            width="30" height="30"></button><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/forward.png"
+            width="30" height="30" style="display: none;"><img src="./myPhysicsLab Double Spring_files/pause.png" width="30"
+            height="30" style="display: block;"></button><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/next.png"
+            width="30" height="30"></button></div><label style="display: block;">Y:<select>
+          <option>-none-</option>
+          <option>position-1</option>
+          <option>position-2</option>
+          <option>velocity-1</option>
+          <option>velocity-2</option>
+          <option>acceleration-1</option>
+          <option>acceleration-2</option>
+          <option>kinetic energy</option>
+          <option>potential energy</option>
+          <option>total energy</option>
+          <option>time</option>
+        </select></label><label style="display: block;">X:<select>
+          <option>-none-</option>
+          <option>position-1</option>
+          <option>position-2</option>
+          <option>velocity-1</option>
+          <option>velocity-2</option>
+          <option>acceleration-1</option>
+          <option>acceleration-2</option>
+          <option>kinetic energy</option>
+          <option>potential energy</option>
+          <option>total energy</option>
+          <option>time</option>
+        </select></label><button type="button" style="display: block;">clear graph</button><label style="display: block;">graph
+        color<select>
+          <option>aqua</option>
+          <option>black</option>
+          <option>blue</option>
+          <option>fuchsia</option>
+          <option>gray</option>
+          <option>green</option>
+          <option>lime</option>
+          <option>maroon</option>
+          <option>navy</option>
+          <option>olive</option>
+          <option>purple</option>
+          <option>red</option>
+          <option>silver</option>
+          <option>teal</option>
+          <option>white</option>
+          <option>yellow</option>
+        </select></label><label style="display: block;">draw width<input type="text" size="4"></label><label style="display: block;">draw
+        mode<select>
+          <option>Dots</option>
+          <option>Lines</option>
+        </select></label><label style="display: block;"><input type="checkbox">pan-zoom</label><button type="button"
+        style="display: block;">share</button>
+    </div>
+    <div id="time_graph_controls" class="control_group" style="display: none;">
+      <div style="display: block;"><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/rewind.png"
+            width="30" height="30"></button><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/forward.png"
+            width="30" height="30" style="display: none;"><img src="./myPhysicsLab Double Spring_files/pause.png" width="30"
+            height="30" style="display: block;"></button><button type="button" class="icon"><img src="./myPhysicsLab Double Spring_files/next.png"
+            width="30" height="30"></button></div><label style="display: block;">line 1<select>
+          <option>-none-</option>
+          <option>position-1</option>
+          <option>position-2</option>
+          <option>velocity-1</option>
+          <option>velocity-2</option>
+          <option>acceleration-1</option>
+          <option>acceleration-2</option>
+          <option>kinetic energy</option>
+          <option>potential energy</option>
+          <option>total energy</option>
+          <option>time</option>
+        </select></label><label style="display: block;">line 2<select>
+          <option>-none-</option>
+          <option>position-1</option>
+          <option>position-2</option>
+          <option>velocity-1</option>
+          <option>velocity-2</option>
+          <option>acceleration-1</option>
+          <option>acceleration-2</option>
+          <option>kinetic energy</option>
+          <option>potential energy</option>
+          <option>total energy</option>
+          <option>time</option>
+        </select></label><label style="display: block;">line 3<select>
+          <option>-none-</option>
+          <option>position-1</option>
+          <option>position-2</option>
+          <option>velocity-1</option>
+          <option>velocity-2</option>
+          <option>acceleration-1</option>
+          <option>acceleration-2</option>
+          <option>kinetic energy</option>
+          <option>potential energy</option>
+          <option>total energy</option>
+          <option>time</option>
+        </select></label><label style="display: block;">X:<select>
+          <option>-none-</option>
+          <option>position-1</option>
+          <option>position-2</option>
+          <option>velocity-1</option>
+          <option>velocity-2</option>
+          <option>acceleration-1</option>
+          <option>acceleration-2</option>
+          <option>kinetic energy</option>
+          <option>potential energy</option>
+          <option>total energy</option>
+          <option>time</option>
+        </select></label><label style="display: block;">time window<input type="text" size="4"></label><button type="button"
+        style="display: block;">clear graph</button><label style="display: block;"><input type="checkbox">pan-zoom</label>
+    </div>
+    <p>
+      <label id="label_show_sim" style="display: none;">
+        <input type="checkbox" id="show_sim">show sim
+      </label>
+      <label id="label_terminal" style="display: inline;">
+        <input type="checkbox" id="show_terminal">terminal
+      </label>
+    </p>
+    <div id="div_terminal" style="display: none;">
+      <textarea id="term_output" cols="80" rows="20" wrap="soft" spellcheck="false"></textarea> <br>
+      <label style="display:inline-block">command &gt;
+        <input type="text" id="term_input" size="80" spellcheck="false">
+      </label>
+    </div>
+  </div>
+
+
+
+  <!-- Call the app script after the body so that html entities are defined and
+* the script can find them.-->
+  <script src="./myPhysicsLab Double Spring_files/DoubleSpringApp-en.js.download"></script>
+  <script>
+    (function build() {
+      var elem_ids = {
+        tab_list: 'header_bar',
+        container: 'container',
+        term_output: 'term_output',
+        term_input: 'term_input',
+        sim_applet: 'sim_applet',
+        div_graph: 'div_graph',
+        graph_controls: 'graph_controls',
+        sim_controls: 'sim_controls',
+        div_terminal: 'div_terminal',
+        div_time_graph: 'div_time_graph',
+        time_graph_controls: 'time_graph_controls',
+        div_multi_graph: 'div_multi_graph',
+        multi_graph_controls: 'multi_graph_controls',
+        label_terminal: 'label_terminal',
+        show_terminal: 'show_terminal',
+        show_sim: 'show_sim',
+        images_dir: '../common'
+      };
+      app = makeDoubleSpringApp(elem_ids);
+      app.defineNames('app');
+      window.addEventListener('pageshow', function (event) {
+        // set language menu to correct language
+        var menu = document.getElementById('language_menu');
+        if (menu) {
+          menu.selectedIndex = 0;
+        }
+      }, /*capturing=*/ false);
+      app.setup();
+      window.addEventListener('blur', function (event) {
+        app.eval('FIRING=false;', /*output=*/ false);
+      }, /*capturing=*/ false);
+      window.addEventListener('focus', function (event) {
+        app.eval('FIRING=true;', /*output=*/ false);
+      }, /*capturing=*/ false);
+    }());
+  </script>
+  <script>
+    // separate script tag, runs even if error occurs in earlier script tag
+    app.start();
+  </script>
+
+  <script>
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
+  </script>
+
+  <div id="cf_notif_div_izj1nl07zu" class="cf_div_position_south light_body cf_div_theme_dark">
+    <div id="all_notification_actions" style="display: none;">
+      <a href="https://www.myphysicslab.com/springs/double-spring-en.html#" class="all_notification_action_button"
+        title="Clear all notifications" id="clear_all"><img src="chrome-extension://iipjdmnoigaobkamfhnojmglcdbnfaaf/img/baseline-clear_all-24px.svg"></a>
+      <a href="https://www.myphysicslab.com/springs/double-spring-en.html#" class="all_notification_action_button"
+        title="Notification settings" id="open_settings"><img src="chrome-extension://iipjdmnoigaobkamfhnojmglcdbnfaaf/img/baseline-settings-20px.svg"></a>
+    </div>
+  </div>
+</body>
+
+</html>
