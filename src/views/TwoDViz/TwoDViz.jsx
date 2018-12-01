@@ -33,7 +33,7 @@ class TwoDViz extends React.Component {
       demos: [
         {
           head: "Симуляція рідин",
-          url: "http://google.github.io/liquidfun/testbed/index.html",
+          url: "https://google.github.io/liquidfun/testbed/index.html",
           width: "100%",
           height: "450px",
           id: "fluid-water",
