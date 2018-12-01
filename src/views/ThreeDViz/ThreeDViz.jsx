@@ -39,16 +39,16 @@ class ThreeDViz extends React.Component {
           id: "fluid-water",
           name: "fluid-water",
           started: false
-        },
-        {
-          head: "Симуляція фізичних сил",
-          url: "/demos/myPhysicsLab Simple Pendulum.html",
-          width: "100%",
-          height: "650px",
-          id: "physics-powers",
-          name: "physics-powers",
-          started: false
         }
+        // {
+        //   head: "Симуляція фізичних сил",
+        //   url: "/demos/myPhysicsLab Simple Pendulum.html",
+        //   width: "100%",
+        //   height: "650px",
+        //   id: "physics-powers",
+        //   name: "physics-powers",
+        //   started: false
+        // }
       ]
     };
 
