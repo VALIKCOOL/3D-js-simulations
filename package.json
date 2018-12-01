@@ -3,7 +3,7 @@
   "version": "1.5.0",
   "description": "Material Dashboard React. Coded by Creative Tim",
   "private": false,
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "dependencies": {
     "@fortawesome/react-fontawesome": "0.1.3",
     "@material-ui/core": "3.6.1",

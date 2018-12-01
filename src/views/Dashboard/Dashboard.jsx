@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
                 <h4 className={classes.cardTitle}>Симуляція у двовимірному просторі</h4>
               </CardBody>
               <CardFooter chart>
-                <div className={classes.stats}>6 демонстрацій</div>
+                <div className={classes.stats}>12 симуляцій</div>
               </CardFooter>
             </Card>
           </GridItem>
@@ -56,7 +56,7 @@ class Dashboard extends React.Component {
                 <h4 className={classes.cardTitle}>Симуляція у тривимірному просторі</h4>
               </CardBody>
               <CardFooter chart>
-                <div className={classes.stats}>5 демонстрацій</div>
+                <div className={classes.stats}>1 симуляція</div>
               </CardFooter>
             </Card>
           </GridItem>
