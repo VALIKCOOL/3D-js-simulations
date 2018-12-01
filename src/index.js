@@ -9,10 +9,6 @@ import indexRoutes from "routes/index.jsx";
 
 const hist = createBrowserHistory();
 
-window.onerror = function(error, url, line) {
-  console.log({acc:'error', data:'ERR:'+error+' URL:'+url+' L:'+line});
-};
-
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
