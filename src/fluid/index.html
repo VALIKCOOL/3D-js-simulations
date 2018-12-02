@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Симуляція рідин</title>
+
+        <meta name="description" content="Real-time particle-based 3D fluid simulation and rendering using WebGL.">
+
+        <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="flip.css"/>
+    </head>
+
+    <body>
+        <script type="text/template" id="main">
+            <style>
+                .editing-ui {
+                    display: none;
+                }
+
+                .simulating-ui {
+                    display: none;
+                }
+            </style>
+
+            <canvas id="canvas" width="1920" height="1080"></canvas>
+
+            <div id="ui">
+                <div id="start-button">Старт</div>
+
+                <div id="preset-button" class="editing-ui">Довільний набір</div>
+
+                <div class="slider-label editing-ui">Кількість часточок</div>
+                <div id="density-slider" class="slider editing-ui"></div>
+
+                <div id="particle-count" class="editing-ui"></div>
+
+                <div class="slider-label simulating-ui">Рідинність</div>
+                <div id="fluidity-slider" class="slider simulating-ui"></div>
+
+                <div class="slider-label simulating-ui">Швидкість</div>
+                <div id="speed-slider" class="slider simulating-ui"></div>
+            </div>
+
+
+            <div class="instructions Eing-ui">
+                <span>Пробіл + тягнути</span> для поворота камери <br/>
+                <span>Скрол</span> для приближення та віддалення <br/>
+                <br/>
+                <span>Намалювати на стінах</span> для створення нових кубів <br/>
+                <span>Потянути за сторони</span> для масштабування <br/>
+                <span>Shift + тягнути</span> для масштабування <br/>
+            </div>
+
+            <div class="instructions edit simulating-ui">
+                <span>Тягнути</span> для повороту камери<br/>
+                <span>Скрол</span> для масштабування <br/>
+                <span>Рухати мишею</span> для руху часточок
+            </div>
+        </script>
+
+        <script type="text/template" id="no-support">
+            <div id="container">
+            </div>
+        </script>
+
+
+        <div id="placeholder"></div>
+
+
+        <script src="wrappedgl.js"></script>
+        <script src="utilities.js"></script>
+        <script src="camera.js"></script>
+        <script src="boxeditor.js"></script>
+        <script src="simulator.js"></script>
+        <script src="renderer.js"></script>
+        <script src="simulatorrenderer.js"></script>
+        <script src="slider.js"></script>
+        <script src="fluidparticles.js"></script>
+
+        <script>
+            function concatenateWords (list) {
+                if (list.length === 0) {
+                    return '';
+                } else if (list.length === 1) {
+                    return "'" + list[0] + "'";
+                } else {
+                    var result = '';
+                    for (var i = 0; i < list.length; ++i) {
+                        result += "'" + list[i] + "'";
+                        if (i < list.length - 1) {
+                            result += i < list.length - 2 ? ', ' : ' and '
+                        }
+                    }
+
+                    return result;
+                }
+            }
+
+            WrappedGL.checkWebGLSupportWithExtensions(['ANGLE_instanced_arrays', 'WEBGL_depth_texture', 'OES_texture_float', 'OES_texture_float_linear', 'OES_texture_half_float', 'OES_texture_half_float_linear'],
+                function () { //we have webgl
+                    document.getElementById('placeholder').outerHTML = document.getElementById('main').innerHTML;
+                    var fluidBox = new FluidParticles();
+                }, function (hasWebGL, unsupportedExtensions) {
+                    document.getElementById('placeholder').outerHTML = document.getElementById('no-support').innerHTML;
+                    if (!hasWebGL) { //webgl not supported
+                        document.getElementById('error').textContent = 'Unfortunately, your browser does not support WebGL';
+                    } else {
+                        document.getElementById('error').textContent = 'Unfortunately, your browser does not support the ' + concatenateWords(unsupportedExtensions) + " WebGL extension" + (unsupportedExtensions.length > 1 ? 's.' : '.');
+                    }
+                }
+            );
+        </script>
+    </body>
+
+</html>
