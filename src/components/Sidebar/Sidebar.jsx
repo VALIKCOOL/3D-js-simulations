@@ -12,9 +12,9 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "@material-ui/core/Icon";
 // core components
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
 
 import sidebarStyle from "assets/jss/material-dashboard-react/components/sidebarStyle.jsx";
+import LOGO from "assets/img/logo.png";
 
 const Sidebar = ({ ...props }) => {
   // verifies if routeName is the one active (in browser input)
@@ -94,15 +94,14 @@ const Sidebar = ({ ...props }) => {
         >
           {brand}
           <div className={classes.sidebarWrapper}>
-            <HeaderLinks />
             {links}
           </div>
-          {/* {image !== undefined ? (
+          {image !== undefined ? (
             <div
               className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
             />
-          ) : null} */}
+          ) : null}
+          <img src={LOGO} className={classes.logoUniversityImage} />
         </Drawer>
       </Hidden>
       <Hidden smDown implementation="css">
@@ -121,6 +120,7 @@ const Sidebar = ({ ...props }) => {
               className={classes.background}
             />
           ) : null}
+          <img src={LOGO} className={classes.logoUniversityImage} />
         </Drawer>
       </Hidden>
     </div>

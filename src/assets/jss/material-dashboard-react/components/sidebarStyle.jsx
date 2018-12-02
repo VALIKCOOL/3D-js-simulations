@@ -83,6 +83,12 @@ const sidebarStyle = theme => ({
     marginLeft: "10px",
     marginRight: "15px"
   },
+  logoUniversityImage :{
+    margin: "auto",
+    width: "auto",
+    height: 250,
+    marginBottom: 10
+  },
   img: {
     width: "35px",
     top: "22px",
