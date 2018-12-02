@@ -11,4 +11,4 @@
 - **WebGL**
 - **LiquidFun**
 
-Спробувати проект онлайн можна за **[посиланням](https://determined-thompson-b865fb.netlify.com/2dviz)**
+Спробувати проект онлайн можна за **[посиланням](https://determined-thompson-b865fb.netlify.com)**
